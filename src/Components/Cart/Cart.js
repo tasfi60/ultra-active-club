@@ -7,7 +7,10 @@ const Cart = (props) => {
     const {cart} = props;
     const[breaktime, setBreaktime] = useState([0]);
 
-    const handleBreak = (time) => setBreaktime(time);
+    const handleBreak = (time) => {
+        setBreaktime(time);
+        localStorage.setItem("BreakTime",time);
+    }
 
     let total = 0;
 
