@@ -16,11 +16,26 @@ const Cart = (props) => {
       total = total + course.Time ;
     }
 
+
+
     const showToastMessage = () => {
-        toast.success('Successfully Completed All activities !', {
-            position: toast.POSITION.TOP_CENTER
-        });
+
+     //  toast message displayed
+
+        if(total && breaktime)
+        {
+            toast.success('Successfully Completed All activities !', {
+                position: toast.POSITION.TOP_CENTER,
+                className: 'toast-message'
+            });
+
+        }
+
+        // if exercise time and breaktime null no toast message will be displayed
+    
     };
+
+
 
     return (
         <div className='cart'>
@@ -56,7 +71,7 @@ const Cart = (props) => {
                     <button onClick={showToastMessage} className='complete-btn'>
                         <p>Activity Completed</p>
                     </button>
-                    <ToastContainer />
+                    <ToastContainer autoClose={false}/>
 
                 
             </div>
