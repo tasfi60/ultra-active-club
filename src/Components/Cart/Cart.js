@@ -9,36 +9,19 @@ const Cart = (props) => {
 
     const handleBreak = (btime) => {
         setBreaktime(btime);
-        // let NewQuantity;
-        // let id;
-        // // localStorage.setItem(id,time);
-        // const quantity = localStorage.getItem('breaktime');
-        // if(quantity)
-        // {
-        //    NewQuantity = JSON.parse(quantity);
-           
-        // }
-        // else
-        // {
-        //     NewQuantity = {};
-        // }
-        // const time = NewQuantity[id];
-        // if(time){
-        //     const Newtime = time + 1;
-        //     NewQuantity[id] = Newtime; 
-        // }
-        // else
-        // {
-        //     NewQuantity[id]=1;
-
-        // }
-         localStorage.setItem('breaktime',JSON.stringify(btime));        
+         localStorage.setItem('breaktime',btime);        
 
     }
 
     useEffect( () => {
         const quantity = localStorage.getItem('breaktime');
-        setBreaktime(quantity);
+        if(quantity){
+            setBreaktime(quantity);
+        }
+        else
+        {
+            setBreaktime(0);
+        }
     }
     ,[])
 
@@ -98,8 +81,6 @@ const Cart = (props) => {
                     <div className='break-time'>
                        <h3>Break time: {breaktime} min </h3>
                     </div>
-                    {/* <button onClick={showToastMessage}>Notify</button>
-                    <ToastContainer /> */}
 
                     <button onClick={showToastMessage} className='complete-btn'>
                         <p>Activity Completed</p>
