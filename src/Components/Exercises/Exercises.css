@@ -32,3 +32,41 @@
 
 
 }
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    .Exercise-Container{
+        display: block;
+    }
+
+    .Course-Container{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .instructor-intro{
+        display: block;
+    }
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .Course-Container{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    .Exercise-Container{
+        display: block;
+    }
+    .instructor-intro{
+        display: block;
+    }
+
+    
+
+
+}
