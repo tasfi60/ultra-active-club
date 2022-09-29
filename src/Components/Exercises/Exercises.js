@@ -45,7 +45,7 @@ const Exercises = () => {
                 <p>Chittagong,Bangladesh</p>
                 </div>
             </div>
-                <Cart ></Cart>
+                <Cart cart={cart} ></Cart>
             <div>
 
             </div>
