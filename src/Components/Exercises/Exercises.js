@@ -49,8 +49,7 @@ const Exercises = () => {
             <div>
 
             </div>
-
-
+                   
             </div>
             
             
