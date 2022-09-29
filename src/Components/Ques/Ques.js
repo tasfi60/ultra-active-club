@@ -23,7 +23,7 @@ const Ques = () => {
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                     <p>
-                    React implements a virtual DOM that is basically a DOM tree representation in JavaScript. So when it needs to read or write to the DOM, it will use the virtual representation of it. Then the virtual DOM will try to find the most efficient way to update the browser's DOM.
+                    React implements a virtual DOM that is basically a DOM tree representation in JavaScript. So when it needs to read or write to the DOM, it will use the virtual representation of it. Then the virtual DOM will try to find the most efficient way to update the browser's DOM.Unlike browser DOM elements, React elements are plain objects and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
                     </p>
                 </AccordionItemPanel>
             </AccordionItem>
