@@ -3,6 +3,7 @@ import './Course.css'
 
 const Course = (props) => {
     const {name, description, image,Age,Time} = props.course;
+    const {handleAddtocart} = props;
     return (
         <div className='course'>
             <img src={image} alt="" />
@@ -11,7 +12,7 @@ const Course = (props) => {
             <p>For age: <b>{Age}</b></p>
             <p>Time Required: <b>{Time}</b></p>
 
-            <button className='btn-container'>
+            <button onClick={ () => handleAddtocart(props.course)} className='btn-container'>
                 Add to Cart
             </button>
         </div>
