@@ -46,9 +46,6 @@ const Exercises = () => {
                 </div>
             </div>
                 <Cart cart={cart} ></Cart>
-            <div>
-
-            </div>
                    
             </div>
             
