@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Cart.css'
@@ -7,10 +7,40 @@ const Cart = (props) => {
     const {cart} = props;
     const[breaktime, setBreaktime] = useState([0]);
 
-    const handleBreak = (time) => {
-        setBreaktime(time);
-        localStorage.setItem("BreakTime",time);
+    const handleBreak = (btime) => {
+        setBreaktime(btime);
+        // let NewQuantity;
+        // let id;
+        // // localStorage.setItem(id,time);
+        // const quantity = localStorage.getItem('breaktime');
+        // if(quantity)
+        // {
+        //    NewQuantity = JSON.parse(quantity);
+           
+        // }
+        // else
+        // {
+        //     NewQuantity = {};
+        // }
+        // const time = NewQuantity[id];
+        // if(time){
+        //     const Newtime = time + 1;
+        //     NewQuantity[id] = Newtime; 
+        // }
+        // else
+        // {
+        //     NewQuantity[id]=1;
+
+        // }
+         localStorage.setItem('breaktime',JSON.stringify(btime));        
+
     }
+
+    useEffect( () => {
+        const quantity = localStorage.getItem('breaktime');
+        setBreaktime(quantity);
+    }
+    ,[])
 
     let total = 0;
 
