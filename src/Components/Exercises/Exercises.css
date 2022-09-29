@@ -1,0 +1,16 @@
+.Exercise-Container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.Course-Container{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.Cart-Container{
+    position: sticky;
+    background-color: rgb(236, 227, 185);
+}

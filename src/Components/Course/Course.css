@@ -1,0 +1,32 @@
+.course{
+    height: 450px ;
+    width: 350px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(242, 238, 238);
+}
+
+.course img{
+
+    width: 286px;
+    height: 200px;
+
+}
+.course p{
+    font-size: smaller;
+    text-align: justify;
+}
+
+.btn-container{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: burlywood;
+    color: black;
+    font-weight: 700;
+}
+
+.btn-container:hover{
+    background-color: rgb(242, 214, 102);
+}
